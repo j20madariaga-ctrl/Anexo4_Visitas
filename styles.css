@@ -49,3 +49,54 @@ h2 {
     font-family: arial;
     font-size: 14px;
 }
+.BODY {
+    background-color: red;
+    margin: auto;
+    }
+.box_imagen{
+    padding: auto;
+    margin: center;
+    position: absolute;
+}
+.box_h1{
+    padding-left: 10%;
+    margin-top: 1px;
+}
+h1 {
+    font-family: arial;
+    text-align: center;
+    font-size: 22px;
+    color:white;
+  }
+h2 {
+    font-family: tahoma;
+    text-align: center;
+    font-weight: normal;
+    font-size: 0.8em;
+    color:white;
+ }
+.DATOS_VISITA {
+    background-color: linear-gradient(to top, transparent,black, white);
+    margin:0%;
+}
+.DATOS_VISITA_LABEL {
+    background-color:red;
+    margin:0.5%;
+    font-family: tahoma;
+    font-size: 0.8em;
+    color: white;
+}
+.DATOS_VISITA_INPUT {
+    background-color:white;
+    margin:0.5%;
+    border-style:hidden;
+    border-radius: 5px;
+    font-family: arial;
+    color:grey;
+}
+.datos_visita_label_input {
+    background-color:white;
+    margin:0.5%;
+    font-family: arial;
+    font-size: 14px;
+}
