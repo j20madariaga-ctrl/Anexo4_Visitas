@@ -1,18 +1,20 @@
-/** ---   ---*/
+/** --- Style-General ---*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Source Code Pro', monospace;
 }
+/** --- Header-Menu ---*/
 header{
     position: fixed;
     top:0;
     left:0;
     width:100%;
     height:80px;
-    background:#fff;
+    background:#ffff;
     box-shadow:0 4px 25px -22px black;
     z-index:2;
 }
@@ -47,48 +49,58 @@ header{
     align-items: center;
     position: relative;
 }
-.menu nav ul li:before{
-content: '';
-width: 100%;
-height: 4px;
-background: #46a2fd;
-position: absolute;
-top: 0;
-left: 0;
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #777777;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .menu nav ul li a{
     color: #777777;
+    font-size: 18px;
     transition: color 300ms;
 }
 .menu nav ul li a:hover{    
     color: red;
 }
+.menu .text-menu-selected{
+    color: #777777;
+}
+    /** Responsive Design ????---- */
+.menu nav ul li a i{
+    display: none;
+}
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeefea;
+    border-radius: 100%;
+    color:#787878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#icon-menu:hover{
+    background: #f2f2f2f2;
+}
 
-/** ----    
-h1 {
-    font-family: arial;
-    text-align: center;
-    font-size: 22px;
-    color:black;
-  }
-h2 {
-    font-family: tahoma;
-    text-align: center;
-    font-weight: normal;
-    font-size: 0.8em;
-    color:black;
- }
-
-  ---- */
-
-/** ----  PORTADA   ---- */
+/** Portada---- */
 
 .container-cover{
     width: 100%;
-    height: 500px;
+    height: 400px;
     position: relative;
-    top:80px;
-    background-image: url(../imagenes/Titulo2.jpg);
+    margin-top: 80px;
+    background-image: url(https://github.com/j20madariaga-ctrl/Anexo4_Visitas/blob/0e18f69d58a207610fef4f89d5da1c1ef1bd64ef/Imagenes/LogoSHP.png?raw=true);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -97,14 +109,14 @@ h2 {
     content: '';
     width:100%;
     height:100%;
-    background: red;
+    background: rgba(255, 99, 38, 0.8);
     position: absolute;
     top: 0;
     left: 0;
 }
 .container-info-cover{
-    max.width:800px;
-    heigth: 500px;
+    max-width:800px;
+    height: 500px;
     margin: auto;
     text-align: center;
     display: flex;
@@ -114,8 +126,221 @@ h2 {
     position: relative;
     z-index: 1;
 }
+.container-info-cover h1{
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.container-info-cover p{
+    color: #fff;
+    font-size: 20PX;
+    font-weight:300;
+}
 
-/** BODY STYLE ALL ------ 
+/* Contenedor - Contenido del Articulo*/
+
+.container-content{
+    width:1200px;
+    margin:auto;
+    margin-top: 40px;
+    display:flex;
+    justify-content: center;
+}   
+article{
+    width:100%;
+    padding:20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 40px;
+}
+article:before{
+    content: '';
+    width:100%;
+    height:6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+}
+article h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 25px;
+}
+article h3{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+article p{
+    margin-top: 20px;
+    font-size: 15px;
+    color:#3c3c3c
+}
+article .article-lista{
+    margin-top: 20px;
+    font-size: 18px;
+    font-size:15px;
+}
+article img{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+/** Aside de los articulos de relacionados*/
+ .container-aside aside{
+    width: 320px;
+    border-right: 6px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow-y: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+.container-aside aside img{
+    width: 100%;
+}
+.container-aside aside h2,
+.container-aside aside p{
+    margin-top: 20px;
+    padding: 0px, 20px;
+}   
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background-color: hsl(12, 98%, 63%);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.container-aside aside button:hover{
+    opacity: 0.9;
+}
+
+/* Footer pie de pagina */
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+.container-footer footer .logo-footer{
+text-align: center;
+}
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+.container-footer footer hr{
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    height: 2px;
+    background: #8c8c8c;
+    border: none; 
+}
+.container-footer  h4{
+    text-align: center;
+    margin-top: 20px;
+    color: #8c8c8c;
+    font-weight: 500;
+}
+
+/* Responsive Desing - adaptable a dispositivos moviles */
+@media screen and (max-width: 1220px){
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 1020px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+    }
+    article{
+    box-shadow: 0 0 0 0;
+    }
+    .container-aside{
+        display: flex;
+        justify-content:center;
+    }
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
+    .container-all{
+        transition: all 300ms cubic-bezier(1, 0, 0, 1);
+    }
+    .move-container-all{
+        transform: translate(300px);
+    }
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translatex(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1, 0, 0, 1);
+    }
+    .show-lateral{
+        width: 300px;
+        transform: translatex(0px);
+    }
+    .menu nav ul{
+        flex-direction: column;
+    }
+    .menu nav ul li{
+        max-width: 300px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+    .menu-selected:before{
+        width: 0;
+    }
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+    }
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+    }
+    #icon-menu{
+        display: flex;
+    }
+    .container-aside aside{
+        flex-wrap: wrap;
+    }
+}
+
+/** Footer pie de pagina 
 
 
 DEPURADO------------------
